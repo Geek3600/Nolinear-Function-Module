@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_NAME=blink
+PROJECT_NAME=nolinear
 
 ###########################################
 # for tcl flow
@@ -12,15 +12,25 @@ VIVADO_SPEED=-2
 VIVADO_PART=\$device\$package\$speed
 
 # top module
-VIVADO_TOP_MODULES=blink
+VIVADO_TOP_MODULES=nolinear
 
 # bd module
 VIVADO_BD_TOP_MODULES=
 
 # source files
 VIVADO_VERILOG_FILELIST=(
-    rtl/common.vh
-    rtl/blink.v
+    rtl/systolic_odd_even_sort/sort_controller.v 
+    rtl/systolic_odd_even_sort/sort_pe.v 
+    rtl/systolic_odd_even_sort/sort4.v 
+    rtl/systolic_odd_even_sort/systolic_odd_even_sort.v
+    rtl/add.v
+    rtl/const_mul.v
+    rtl/exp2.v
+    rtl/log2.v
+    rtl/nolinear.v
+    rtl/register.v
+    rtl/ru.v
+    rtl/selector.v
 )
 VIVADO_INC_PATH_FILELIST=(
     rtl
@@ -30,10 +40,9 @@ VIVADO_XCI_FILELIST=
 VIVADO_BD_FILE=
 VIVADO_BD_TCL_FILELIST=
 VIVADO_XDC_FILELIST=(
-    xdc/blink.xdc
 )
 VIVADO_SIM_FILELIST=(
-    tb/tb_blink.v
+    tb/tb_nolinear.v
 )
 VIVADO_POST_SYNTH_SCRIPTS_FILELIST=
 
@@ -53,7 +62,7 @@ VIVADO_ROUTE_OPT_OPT=""
 VCS_ENABLE=1
 
 # pre-compiled simulation library
-VCS_COMPILE_LIB_DIR=/xxx/compile_simlib/vcs
+VCS_COMPILE_LIB_DIR=/home/hyyuan/vcs_lib
 
 # simulation config
 VCS_TIMESCALE="1ns/1ps"
@@ -63,13 +72,13 @@ VCS_TIMESCALE="1ns/1ps"
 # 2. POST_SYNTH
 VCS_SIM_MODE=RTL
 
-VCS_SIM_TOP_MODULE=tb_blink
-VCS_FSDB_FILE=tb_blink.fsdb
+VCS_SIM_TOP_MODULE=tb_${VIVADO_TOP_MODULES}
+VCS_FSDB_FILE=${VCS_SIM_TOP_MODULE}.fsdb
 
 ###########################################
 # for iverilog flow
 ###########################################
 IVERILOG_ENABLE=1
 
-IVERILOG_SIM_TOP_MODULE=tb_blink
-IVERILOG_VCD_FILE=tb_blink.vcd
+IVERILOG_SIM_TOP_MODULE=tb_${VIVADO_TOP_MODULES}
+IVERILOG_VCD_FILE=${VCS_SIM_TOP_MODULE}.vcd

@@ -83,6 +83,7 @@ VCS_COMPILE_SCRIPT=${VCS_DIR}/compile.sh
 VCS_ELABORATE_SCRIPT=${VCS_DIR}/elaborate.sh
 VCS_SIMUALTE_SCRIPT=${VCS_DIR}/simulate.sh
 VCS_VERDI_SCRIPT=${VCS_DIR}/verdi.sh
+VCS_ALL_SCRIPT=${VCS_DIR}/all.sh
 VCS_SIM_FILELIST=${VCS_DIR}/filelist.txt
 
 ###########################################

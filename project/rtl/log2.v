@@ -7,7 +7,7 @@ module log2 #(
 );
 
     reg [FIX_POINT_WIDTH - 1:0] one_hot;
-    reg [$clog2(FIX_POINT_WIDTH) - 1:0] position;
+    reg [4:0] position;
 
     integer i;
     always @(*) begin

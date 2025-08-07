@@ -10,15 +10,16 @@ module constant_mul #(
     // 0 1 = 1
     // 1 0.5 = 0.1
     // 2 log2e = 1.011100 01 = 1.4427
-    // 3 gelu α+-log2e = 10.100100 10 = 2.5708914
+    // 3 gelu α+-log2e = 10.100100 10 = 2.56250000
     // 4 silu α+log2e = 1.011011 00 = 1.4225022
     // 5 silu α-log2e = 1.000011 00 = 1.0459575
-    wire signed [FIX_POINT_WIDTH - 1:0] a;
-    wire signed [FIX_POINT_WIDTH - 1:0] b;
-    wire signed [FIX_POINT_WIDTH - 1:0] c;
-    assign a = (in >>> 2);
-    assign b = (in >>> 3);
-    assign c = (in >>> 4);
+    
+    // wire signed [FIX_POINT_WIDTH - 1:0] a;
+    // wire signed [FIX_POINT_WIDTH - 1:0] b;
+    // wire signed [FIX_POINT_WIDTH - 1:0] c;
+    // assign a = (in >>> 2);
+    // assign b = (in >>> 3);
+    // assign c = (in >>> 4);
 
 
     assign out = (s_mult == 0) ? in :

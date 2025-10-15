@@ -6,9 +6,13 @@ module systolic_odd_even_sort # (
 	input rst,
     input en,
     input  [DATA_NUM*FIX_POINT_WIDTH-1:0] in,
-    output [FIX_POINT_WIDTH-1:0] max_out 
+    output [FIX_POINT_WIDTH-1:0] max_out ,
+    output sort_finish
 );
 
+// 1 1 7 1  
+// 32 
+// ((num / 2) - 1) * 9 + 1
     wire even_SL;
     wire even_SR;
     wire odd_SL;
@@ -23,7 +27,10 @@ module systolic_odd_even_sort # (
     wire even_cmp_en;
     wire write_enable;
 
-    sort_controller u_sort_controller(
+    sort_controller  #(
+        .FIX_POINT_WIDTH(FIX_POINT_WIDTH),
+        .DATA_NUM(DATA_NUM)
+    ) u_sort_controller (
         .clk(clk),
         .rst(rst),
         .en(en),
@@ -37,7 +44,8 @@ module systolic_odd_even_sort # (
         .odd_RL(odd_RL),
         .odd_RR(odd_RR),
         .odd_cmp_en(odd_cmp_en),
-        .even_cmp_en(even_cmp_en)
+        .even_cmp_en(even_cmp_en),
+        .sort_finish(sort_finish)
     );
 
     wire [(DATA_NUM-1)*FIX_POINT_WIDTH-1:0] in_right1;
@@ -183,3 +191,4 @@ module systolic_odd_even_sort # (
 
 endmodule
 
+// 12 34  6n

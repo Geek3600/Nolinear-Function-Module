@@ -17,7 +17,7 @@ module selector #(
     parameter GELU_BETA_PLUS = 16'b0000000001000001;// 0.254 = 0.0100 0001 'h0041
     parameter GELU_BETA_SUB  = 16'b0; // 0
     parameter SiLU_BETA_PLUS = 16'b0000000000011100;// 0.110
-    parameter SiLU_BETA_SUB  =  16'b1000000000011100;// -0.111
+    parameter SiLU_BETA_SUB  = 16'b1000000000011100;// -0.111
 
     assign beta = (mode == 1) ? in0[FIX_POINT_WIDTH - 1] ? GELU_BETA_SUB : GELU_BETA_PLUS : // FELU
                                 in0[FIX_POINT_WIDTH - 1] ? SiLU_BETA_SUB : SiLU_BETA_PLUS; // SILU 选择β+-

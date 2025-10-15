@@ -30,6 +30,7 @@ module sort4 # (
         else if (sort_en && cnt < 'd6) cnt <= cnt + 1;
         else cnt <= 0;
     end
+    
     assign sort_finish = (cnt == 6) ? 1 : 0;
     always @(posedge clk) begin
         if (rst) begin

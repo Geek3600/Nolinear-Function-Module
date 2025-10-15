@@ -1,7 +1,7 @@
 module nolinear #(
     parameter Bf = 8,
     parameter FIX_POINT_WIDTH = 16,
-    parameter DATA_NUM = 4
+    parameter DATA_NUM = 16
 )  (
     input clk,
     input rst,
@@ -14,21 +14,20 @@ module nolinear #(
     input s_add,
     input en_add,
     input en_mult,
+    input max_en,
     output reg [DATA_NUM * FIX_POINT_WIDTH - 1:0] out
 );
 
     // stage 1
     // max 找最大值(仅用于softmax)
     wire [FIX_POINT_WIDTH-1:0] max_out;
-    wire en;
-    assign en = (mode == 'b00);
     systolic_odd_even_sort # (
         .FIX_POINT_WIDTH(FIX_POINT_WIDTH),
         .DATA_NUM(DATA_NUM)
     ) u_systolic_odd_even_sort (
 	    .clk(clk),
 	    .rst(rst),
-        .en(en),
+        .en(max_en),
         .in(in),
         .max_out(max_out)
     );
@@ -51,7 +50,6 @@ module nolinear #(
     wire [DATA_NUM * 3 - 1: 0] s_mult_d;
 
     // softmax和gelu的2阶段需要用到不同
-    // assign selector_in2 = (valid) ? stage4_out0 : 0;
     assign selector_in2 = (valid) ? (mode == 0) ? stage4_out0 : stage4_out1 : 0;
 
     // 把softmax一阶段的求和分发到所有端口，用于二阶段计算
@@ -95,15 +93,12 @@ module nolinear #(
                 .Bf(Bf),
                 .FIX_POINT_WIDTH(FIX_POINT_WIDTH)
             ) u_ru (
-                // 5 input
                 .valid(valid),
                 .mode(mode),
                 .in0(stage1_out0[j*FIX_POINT_WIDTH-1:(j-1)*FIX_POINT_WIDTH]),
                 .in1(stage1_out1[j*FIX_POINT_WIDTH-1:(j-1)*FIX_POINT_WIDTH]),
                 .s_mux(s_mux),
                 .s_mult(s_mult_d[j*3-1:(j-1)*3]),
-
-                // 3 output
                 .out0(ru_out0[j*FIX_POINT_WIDTH-1:(j-1)*FIX_POINT_WIDTH]),
                 .out1(ru_out1[j*FIX_POINT_WIDTH-1:(j-1)*FIX_POINT_WIDTH]),
                 .u(u[j*FIX_POINT_WIDTH-1:(j-1)*FIX_POINT_WIDTH])
@@ -130,13 +125,10 @@ module nolinear #(
                     .Bf(Bf),
                     .FIX_POINT_WIDTH(FIX_POINT_WIDTH)
                 ) u_add (
-                    // 4 input 
                     .in0(stage2_out1[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH]),
                     .in1(16'b0),
                     .u(stage2_out_u[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH]),
                     .s_add(s_add),
-
-                    // 2 output 
                     .out0(add_out0[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH]),
                     .out1(add_out1[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH])
                 );
@@ -146,20 +138,17 @@ module nolinear #(
                     .Bf(Bf),
                     .FIX_POINT_WIDTH(FIX_POINT_WIDTH)
                 ) u_add (
-                    // 4 input 
                     .in0(stage2_out1[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH]),
                     .in1(add_out1[(a-1)*FIX_POINT_WIDTH-1:(a-2)*FIX_POINT_WIDTH]),
                     .u(stage2_out_u[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH]),
                     .s_add(s_add),
-
-                    // 2 output 
                     .out0(add_out0[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH]),
                     .out1(add_out1[a*FIX_POINT_WIDTH-1:(a-1)*FIX_POINT_WIDTH])
                 );
             end
         end
     endgenerate
-    assign stage3_mux = (en_add) ? ru_out1 : add_out0;
+    assign stage3_mux = (en_add || mode == 'b11) ? stage2_out1 : add_out0;
     register # (.DATASIZE(DATA_NUM * FIX_POINT_WIDTH)) u_stage3_reg0 (clk, rst, stage2_out0, stage3_out0);
     register # (.DATASIZE(DATA_NUM * FIX_POINT_WIDTH)) u_stage3_reg1 (clk, rst, stage3_mux, stage3_out1);
     register # (.DATASIZE(DATA_NUM * FIX_POINT_WIDTH)) u_stage3_reg_u (clk, rst, stage2_out_u, stage3_out_u);
@@ -167,10 +156,10 @@ module nolinear #(
     // stage 4
     wire [2 * DATA_NUM * FIX_POINT_WIDTH-1:0] multiply;
     genvar k;
-    generate
+    generate    
         for (k = 1; k <= DATA_NUM; k = k + 1) begin: stage4 
             assign multiply[2*k*FIX_POINT_WIDTH-1:2*(k-1)*FIX_POINT_WIDTH] = stage3_out1[k*FIX_POINT_WIDTH-1:(k-1)*FIX_POINT_WIDTH] * in[k*FIX_POINT_WIDTH-1:(k-1)*FIX_POINT_WIDTH]; // gelu和silu最后与输入相乘
-            assign stage4_mux[k*FIX_POINT_WIDTH-1:(k-1)*FIX_POINT_WIDTH] = (en_mult) ? stage3_out1[k*FIX_POINT_WIDTH-1:(k-1)*FIX_POINT_WIDTH] : multiply[2*k*FIX_POINT_WIDTH + Bf -1:2*(k-1)*FIX_POINT_WIDTH + Bf];
+            assign stage4_mux[k*FIX_POINT_WIDTH-1:(k-1)*FIX_POINT_WIDTH] = (en_mult) ? stage3_out1[k*FIX_POINT_WIDTH-1:(k-1)*FIX_POINT_WIDTH] : multiply[2*k*FIX_POINT_WIDTH - Bf -1:2*(k-1)*FIX_POINT_WIDTH + Bf];
         end
     endgenerate
     register # (.DATASIZE(DATA_NUM * FIX_POINT_WIDTH)) u_stage4_reg0 (clk, rst, stage3_out0, stage4_out0);
@@ -178,47 +167,40 @@ module nolinear #(
     register # (.DATASIZE(DATA_NUM * FIX_POINT_WIDTH)) u_stage4_reg_u (clk, rst, stage3_out_u, stage4_out_u);
 
 
-    // assign out = stage4_out1;
-
-
-    reg [DATA_NUM] s;
     genvar m;
     generate
-        for (m = 1; m <= FIX_POINT_WIDTH; m = m + 1) begin: skip
+        for (m = 1; m <= DATA_NUM; m = m + 1) begin: skip
             wire signed [(FIX_POINT_WIDTH - Bf) - 1 : 0] input_int;
             assign input_int = in[m * FIX_POINT_WIDTH - 1 : (m-1) * FIX_POINT_WIDTH + Bf]; 
             always @(*) begin
                 if (mode == 1) begin // gelu
+                // 如果输入的数值>4或<-4，则直接输出
                     if (input_int >= 8'sd4 || input_int <= -8'sd4) begin
                     // if (input_int[m*(FIX_POINT_WIDTH-Bf)-1:(m-1)*(FIX_POINT_WIDTH-Bf)] >= 8'sd4 || input_int[m*(FIX_POINT_WIDTH-Bf)-1:(m-1)*(FIX_POINT_WIDTH-Bf)] <= -8'sd4) begin
-                        s[m-1] = 1;
                         out[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH] = in[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH];
                     end
                     else begin 
-                        s[m-1] = 0;
                         out[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH] = stage4_out1[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH];
                     end
                 end
                 else if (mode == 2) begin // silu
-                    if (input_int >= 8'sd9 || input_int <= -8'sd9) begin
+                // 如果输入的数值>9或<-9，则直接输出
+                    if (input_int >= 8'sd6 || input_int <= -8'sd6) begin
                     // if (input_int[m*(FIX_POINT_WIDTH-Bf)-1:(m-1)*(FIX_POINT_WIDTH-Bf)] >= 8'sd9 || input_int[m*(FIX_POINT_WIDTH-Bf)-1:(m-1)*(FIX_POINT_WIDTH-Bf)] <= -8'sd9) begin
-                        s[m-1] = 1;
                         out[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH] = in[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH];
                     end
                     else begin 
-                        s[m-1] = 0;
                         out[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH] = stage4_out1[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH];
                     end
                 end
                 else 
-                    s[m-1] = 0;
                     out[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH] = stage4_out1[m*FIX_POINT_WIDTH-1:(m-1)*FIX_POINT_WIDTH];
             end
         end
     endgenerate
 
 
-    reg [DATA_NUM-1:0] input_sign;
+    wire [DATA_NUM-1:0] input_sign;
     genvar n;
     generate 
         for (n = 1; n <= DATA_NUM; n = n + 1) begin: silu_const_mul

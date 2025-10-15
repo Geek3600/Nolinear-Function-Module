@@ -31,6 +31,8 @@ VIVADO_VERILOG_FILELIST=(
     rtl/register.v
     rtl/ru.v
     rtl/selector.v
+    rtl/controller.v
+    rtl/nolinear_top.v
 )
 VIVADO_INC_PATH_FILELIST=(
     rtl

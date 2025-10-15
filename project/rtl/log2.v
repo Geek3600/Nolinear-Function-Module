@@ -8,18 +8,20 @@ module log2 #(
 
     reg [FIX_POINT_WIDTH - 1:0] one_hot;
     reg [4:0] position;
+    reg found;
 
     integer i;
     always @(*) begin
         position = 0; // 默认位置为0
         one_hot = 0;
+        found = 0;
         // 2. 从最高位(MSB)开始向下扫描
         for (i = FIX_POINT_WIDTH - 1; i >= 0; i = i - 1) begin
-            if (in[i] == 1'b1) begin
+            if (in[i] == 1'b1 && !found) begin
                 // 3. 一旦找到第一个'1'
                 position = i + 1;         // 记录当前位置
                 one_hot = 1 << i;
-                break;                // 立即退出循环，因为我们只关心最高位的'1'
+                found = 1;                // 立即退出循环，因为我们只关心最高位的'1'
             end
         end
     end

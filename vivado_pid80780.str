@@ -1,0 +1,829 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 80780
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Aug 14 00:12:09 EDT 2025
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: CentOS Linux release 7.9.2009 (Core)
+OS Version: 3.10.0-1160.119.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 96
+
+Display: localhost:13.0
+Screen size: 2560x1440
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/home/EDA/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/home/EDA/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	hyyuan
+User home directory: /home/hyyuan
+User working directory: /home/hyyuan/workspace/nolinear_function
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/EDA/Xilinx/Vivado
+HDI_APPROOT: /home/EDA/Xilinx/Vivado/2021.1
+RDI_DATADIR: /home/EDA/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /home/EDA/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/hyyuan/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/hyyuan/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/hyyuan/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/home/EDA/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	
+Vivado journal file: 	
+Engine tmp dir: 	./.Xil/Vivado-80780-dsic-h3c-server03
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/EDA/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: /home/EDA/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: /home/EDA/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /home/EDA/Xilinx/Vivado/2021.1
+XILINX_SDK: /home/EDA/Xilinx/Vitis/2021.1
+XILINX_VITIS: /home/EDA/Xilinx/Vitis/2021.1
+XILINX_VIVADO: /home/EDA/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /home/EDA/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,902 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 5,902 MB. GUI used memory: 77 MB. Current time: 8/14/25, 12:12:09 AM EDT
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 136 MB (+139710kb) [00:00:11]
+// [Engine Memory]: 5,904 MB (+6039329kb) [00:00:11]
+// f (cs): New Project: addNotify
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 22 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "nolinear_function"); // aa
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 19 seconds
+String[] filenames31467 = {"/home/hyyuan/workspace/nolinear_function/project/rtl/add.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/const_mul.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/exp2.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/log2.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/register.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/ru.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/selector.v"};
+setFileChooser(filenames31467);
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+String[] filenames16706 = {"/home/hyyuan/workspace/nolinear_function/project/rtl/systolic_odd_even_sort/sort4.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/systolic_odd_even_sort/sort_controller.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/systolic_odd_even_sort/sort_pe.v", "/home/hyyuan/workspace/nolinear_function/project/rtl/systolic_odd_even_sort/systolic_odd_even_sort.v"};
+setFileChooser(filenames16706);
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 16 seconds
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xcvu9p"); // OverlayTextField
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xcvu9p-flga2104-2-i ; 2104 ; 832 ; 1182240 ; 2364480 ; 2160 ; 960 ; 6840 ; 52 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 52 ; 0 ; 0 ; 0 ; 0 ; 6 ; 30 ;  ; 9 ;  ;  ;  ; -40 ; 100 ; 100 ; I ; 0.825 ; 0.850 ; 0.876", 2, "xcvu9p-flga2104-2-i", 0); // H
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xcvu9p-flga2104-2-i ; 2104 ; 832 ; 1182240 ; 2364480 ; 2160 ; 960 ; 6840 ; 52 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 52 ; 0 ; 0 ; 0 ; 0 ; 6 ; 30 ;  ; 9 ;  ;  ;  ; -40 ; 100 ; 100 ; I ; 0.825 ; 0.850 ; 0.876", 2, "xcvu9p-flga2104-2-i", 0, false, false, false, false, true); // H - Double Click
+selectButton("NEXT", "Next >"); // JButton
+// bz (cs):  Create Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project nolinear_function /home/hyyuan/workspace/nolinear_function/nolinear_function -part xcvu9p-flga2104-2-i 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1787 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/EDA/Xilinx/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,969 MB. GUI used memory: 90 MB. Current time: 8/14/25, 12:13:35 AM EDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 7761.922 ; gain = 62.121 ; free physical = 421739 ; free virtual = 499612 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectButton("FINISH", "Finish"); // JButton
+dismissDialog("Create Project"); // bz
+dismissDialog("New Project"); // f
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 156 MB (+14280kb) [00:01:51]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true, false, false, false, true, false); // D - Popup Trigger - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 6,072 MB. GUI used memory: 98 MB. Current time: 8/14/25, 12:13:54 AM EDT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 48 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Thu Aug 14 00:14:01 2025] Launched synth_1... Run output will be captured here: /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 213 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-1852] concurrent assignment to a non-net input_sign is not permitted [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:226]. ]", 2, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6775] single value range is not allowed in packed dimension [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:184]. ]", 1, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;184;-;;-;16;-;"); // ah
+// WARNING: HEventQueue.dispatchEvent() is taking  2365 ms.
+selectCodeEditor("nolinear.v", 448, 625); // bP
+// Elapsed time: 51 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6775] single value range is not allowed in packed dimension [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:184]. ]", 1, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;184;-;;-;16;-;"); // ah
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 6,117 MB. GUI used memory: 100 MB. Current time: 8/14/25, 12:19:19 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 61 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-1852] concurrent assignment to a non-net input_sign is not permitted [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:226]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;226;-;;-;16;-;"); // ah
+// HMemoryUtils.trashcanNow. Engine heap size: 6,159 MB. GUI used memory: 153 MB. Current time: 8/14/25, 12:19:44 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 48 
+// Tcl Message: [Thu Aug 14 00:20:07 2025] Launched synth_1... Run output will be captured here: /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 6,193 MB. GUI used memory: 100 MB. Current time: 8/14/25, 12:20:09 AM EDT
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 54 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-36] 'break' is not declared [/home/hyyuan/workspace/nolinear_function/project/rtl/log2.v:22]. ]", 1, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/log2.v;-;;-;16;-;line;-;22;-;;-;16;-;"); // ah
+// WARNING: HEventQueue.dispatchEvent() is taking  2189 ms.
+selectCodeEditor("log2.v", 255, 393); // bP
+selectCodeEditor("log2.v", 129, 327); // bP
+selectCodeEditor("log2.v", 129, 327, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("log2.v", 151, 323); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 6,205 MB (+5743kb) [00:09:21]
+// HMemoryUtils.trashcanNow. Engine heap size: 6,226 MB. GUI used memory: 100 MB. Current time: 8/14/25, 12:21:24 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 6,242 MB. GUI used memory: 100 MB. Current time: 8/14/25, 12:22:44 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 128 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-196] conditional expression could not be resolved to a constant [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:93]. ]", 3, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;93;-;;-;16;-;"); // ah
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 48 
+// Tcl Message: [Thu Aug 14 00:23:40 2025] Launched synth_1... Run output will be captured here: /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Failed: addNotify
+// Elapsed time: 31 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [135:104] out of range of prefix 'multiply' [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:173]. ]", 1, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;173;-;;-;16;-;"); // ah
+selectCodeEditor("nolinear.v", 233, 261); // bP
+selectCodeEditor("nolinear.v", 170, 160); // bP
+selectCodeEditor("nolinear.v", 170, 160, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("nolinear.v", 161, 280); // bP
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-196] conditional expression could not be resolved to a constant [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:171]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-196] conditional expression could not be resolved to a constant [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:171]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah
+selectCodeEditor("nolinear.v", 155, 253); // bP
+// Elapsed time: 15 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [135:104] out of range of prefix 'multiply' [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:173]. ]", 1, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;173;-;;-;16;-;"); // ah
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 6,344 MB. GUI used memory: 107 MB. Current time: 8/14/25, 12:24:54 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 6,376 MB. GUI used memory: 107 MB. Current time: 8/14/25, 12:26:54 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 297 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-196] conditional expression could not be resolved to a constant [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:171]. ]", 2, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-196] conditional expression could not be resolved to a constant [/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v:171]. ]", 2, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/hyyuan/workspace/nolinear_function/project/rtl/nolinear.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah
+selectCodeEditor("nolinear.v", 338, 182); // bP
+selectCodeEditor("nolinear.v", 218, 130); // bP
+selectCodeEditor("nolinear.v", 218, 130, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("nolinear.v", 287, 199); // bP
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 166 MB (+2738kb) [00:17:59]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 48 
+// Tcl Message: [Thu Aug 14 00:29:59 2025] Launched synth_1... Run output will be captured here: /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 128 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // o
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // o
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15, true); // o - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bz (cs):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xcvu9p-flga2104-2-i 
+// HMemoryUtils.trashcanNow. Engine heap size: 6,818 MB. GUI used memory: 108 MB. Current time: 8/14/25, 12:32:14 AM EDT
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 7,023 MB. GUI used memory: 108 MB. Current time: 8/14/25, 12:32:21 AM EDT
+// [Engine Memory]: 7,023 MB (+532870kb) [00:20:21]
+// [GUI Memory]: 244 MB (+72817kb) [00:20:24]
+// Xgd.load filename: /home/EDA/Xilinx/Vivado/2021.1/data/parts/xilinx/virtexuplus/devint/virtexuplus/xcvu9p/xcvu9p.xgd; ZipEntry: xcvu9p_detail.xgd elapsed time: 1.8s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 2.1s
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 7,416 MB (+43377kb) [00:20:25]
+// [GUI Memory]: 264 MB (+8300kb) [00:20:26]
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1874 ms.
+// Tcl Message: INFO: [Device 21-403] Loading part xcvu9p-flga2104-2-i 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 8612.812 ; gain = 0.000 ; free physical = 418878 ; free virtual = 496857 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 470 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2021.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8793.227 ; gain = 0.000 ; free physical = 418759 ; free virtual = 496738 
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 287 instances were transformed.   DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 16 instances   IBUF => IBUF (IBUFCTRL, INBUF): 271 instances  
+// [Engine Memory]: 7,954 MB (+175200kb) [00:20:27]
+// [Engine Memory]: 8,372 MB (+21288kb) [00:20:27]
+// [Engine Memory]: 9,130 MB (+356675kb) [00:20:27]
+// Elapsed time: 18 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 3.6s
+// Tcl Message: open_run: Time (s): cpu = 00:00:54 ; elapsed = 00:00:18 . Memory (MB): peak = 9614.770 ; gain = 1425.852 ; free physical = 418094 ; free virtual = 496073 
+// 'dU' command handler elapsed time: 19 seconds
+dismissDialog("Open Synthesized Design"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 9,121 MB. GUI used memory: 211 MB. Current time: 8/14/25, 12:32:39 AM EDT
+// Elapsed time: 17 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+// [Engine Memory]: 9,724 MB (+143437kb) [00:20:49]
+// RouteApi::initDelayMediator elapsed time: 29.8s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Elapsed time: 34 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+// a (cs): Report Utilization: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// bz (cs):  Report Utilization : addNotify
+// Tcl Message: report_utilization -name utilization_1 
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 9,998 MB. GUI used memory: 219 MB. Current time: 8/14/25, 12:33:29 AM EDT
+// Tcl Message: report_utilization: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 11793.105 ; gain = 0.004 ; free physical = 415722 ; free virtual = 493862 
+dismissDialog("Report Utilization"); // bz
+// Elapsed time: 10 seconds
+collapseTreeTable((HResource) null, "nolinear ; 7799 ; 3078 ; 183 ; 16 ; 527 ; 1", 0); // y
+// Elapsed time: 57 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, CLB Logic, CLB LUTs, LUT as Logic]", 5, false); // l
+// Elapsed time: 41 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+// Elapsed time: 25 seconds
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // o
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // o
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, nolinear (nolinear.v)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // D
+// [GUI Memory]: 278 MB (+192kb) [00:23:56]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "I/O Planning", 1); // r
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+// Device view-level: 0.0
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (mode) elapsed time: 4.3s
+// Elapsed time: 16 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mode (2) ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 2, (String) null, 2, true); // A - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  4336 ms.
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mode (2) ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 2, "default (LVCMOS18)", 6, true); // A - Node
+// u:  Generate Schematic : addNotify
+dismissDialog("Generate Schematic"); // u
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mode (2) ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 2, "default (LVCMOS18)", 6, true); // A - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list {mode[1]} {mode[0]}]] 
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "out (256) ; OUT ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ; 12 ;  ; NONE ; FP_VTT_50", 3, "default (LVCMOS18)", 6, true); // A - Node
+// TclEventType: SIGNAL_MODIFY
+// [GUI Memory]: 292 MB (+400kb) [00:24:52]
+// TclEventType: SIGNAL_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 9,999 MB. GUI used memory: 227 MB. Current time: 8/14/25, 12:36:52 AM EDT
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "s_in (3) ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 4, "default (LVCMOS18)", 6, true); // A - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list {s_in[2]} {s_in[1]} {s_in[0]}]] 
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "s_mult (3) ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 5, "default (LVCMOS18)", 6, true); // A - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list {s_mult[2]} {s_mult[1]} {s_mult[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, "default (LVCMOS18)", 6, true); // A - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 9,999 MB. GUI used memory: 226 MB. Current time: 8/14/25, 12:37:07 AM EDT
+// TclEventType: SIGNAL_MODIFY
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 7, "default (LVCMOS18)", 6, false); // A
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list clk]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_add ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 8, "default (LVCMOS18)", 6, false); // A
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list en_add]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_mult ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 9, "default (LVCMOS18)", 6, false); // A
+// TclEventType: SIGNAL_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 9,999 MB. GUI used memory: 228 MB. Current time: 8/14/25, 12:37:19 AM EDT
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list en_mult]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 10, "default (LVCMOS18)", 6, false); // A
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS15 [get_ports [list rst]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ;  ;  ;  ; LVCMOS15 ; 1.5 ;  ;  ;  ; NONE ; NONE", 10, "LVCMOS15", 6, false); // A
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list rst]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "s_add ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 11, "default (LVCMOS18)", 6, false); // A
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list s_add]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "s_mux ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 12, "default (LVCMOS18)", 6, false); // A
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list s_mux]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "valid ; IN ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE", 13, "default (LVCMOS18)", 6, false); // A
+// TclEventType: SIGNAL_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 9,999 MB. GUI used memory: 226 MB. Current time: 8/14/25, 12:37:31 AM EDT
+// Tcl Message: set_property IOSTANDARD LVCMOS18 [get_ports [list valid]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 3, true); // A - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 3, true); // A - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 7, (String) null, 3, false); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_mult ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 9, (String) null, 3, false); // A
+// HMemoryUtils.trashcanNow. Engine heap size: 9,999 MB. GUI used memory: 226 MB. Current time: 8/14/25, 12:37:44 AM EDT
+// Tcl Message: set_property package_pin "" [get_ports [list  clk]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 7, (String) null, 3, false); // A
+// Tcl Message: set_property package_pin "" [get_ports [list  en_mult]] 
+// Elapsed time: 109 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 968461, 4191752); // E
+// Tcl Message: set_property package_pin "" [get_ports [list  clk]] 
+// Device select: 'Tile - HPIO_L_X35Y420'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 462, 241, 971, 502); // U
+// Device view-level: 0.6
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 10,001 MB. GUI used memory: 229 MB. Current time: 8/14/25, 12:39:36 AM EDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1234620, 4596948); // E
+// Device select: 'Clock Region - X2Y6'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 437, 1338, 971, 502); // U
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 3.2
+// Device view-level: 3.5
+// HMemoryUtils.trashcanNow. Engine heap size: 10,001 MB. GUI used memory: 230 MB. Current time: 8/14/25, 12:39:39 AM EDT
+// Device view-level: 3.8
+// Device view-level: 4.1
+// Device view-level: 4.4
+// Device view-level: 4.7
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 1226078, 4591875); // E
+// Device select: 'BEL Pin - MC31'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 46302, 173409, 971, 502); // U
+// HMemoryUtils.trashcanNow. Engine heap size: 10,001 MB. GUI used memory: 232 MB. Current time: 8/14/25, 12:39:41 AM EDT
+// Device view-level: 4.4
+// Device view-level: 4.1
+// Device view-level: 3.8
+// Device view-level: 3.5
+// Device view-level: 3.2
+// HMemoryUtils.trashcanNow. Engine heap size: 10,001 MB. GUI used memory: 231 MB. Current time: 8/14/25, 12:39:47 AM EDT
+// Device view-level: 2.9
+// Device view-level: 2.3
+// Device view-level: 2.0
+// Device view-level: 1.5
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 10,001 MB. GUI used memory: 232 MB. Current time: 8/14/25, 12:39:48 AM EDT
+// Device view-level: 0.9
+// Device view-level: 0.3
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package", 0); // m
+// Elapsed time: 30 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 7, (String) null, 3, false); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6, "Scalar ports (7)", 0, true); // A - Node
+// Tcl Message: set_property package_pin "" [get_ports [list  clk]] 
+// Elapsed time: 55 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 3, true); // A - Node
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1); // A
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 3, true); // A - Node
+// Elapsed time: 33 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 4, true); // A - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 4, true); // A - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 3, true); // A - Node
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mode (2) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 2); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mode (2) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 2, "mode (2)", 0, true); // A - Node
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mode (2) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 2); // A
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "All ports (527) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0); // A
+// Elapsed time: 20 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "All ports (527) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 7, (String) null, 3, false); // A
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports clk A11 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_add ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 8, (String) null, 3, false); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ; A11 ; true ; 71 ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 7, "A11", 3, false); // A
+// Tcl Message: set_property package_pin "" [get_ports [list  en_add]] 
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports clk A10 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_add ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 8, (String) null, 4, false); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_add ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 8, (String) null, 3, false); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_add ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 8, (String) null, 3, false); // A
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports en_add A11 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_mult ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 9, (String) null, 3, false); // A
+selectButton("OptionPane.button", "No"); // JButton
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "en_mult ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 9, (String) null, 3, false); // A
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports en_mult A13 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 10, (String) null, 3, false); // A
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports rst A18 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "s_add ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 11, (String) null, 3, false); // A
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports s_add A21 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "s_mux ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 12, (String) null, 3, false); // A
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports s_mux A19 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "valid ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 13, (String) null, 3, false); // A
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports valid A23 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// a (cs): Save Constraints: addNotify
+dismissDialog("Save Project"); // am
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Save Constraints"); // a
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// a (cs): Save Constraints: addNotify
+dismissDialog("Save Project"); // am
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "nolinear_function"); // aa
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// bz (cs):  Save Constraints : addNotify
+// Tcl Message: file mkdir /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.srcs/constrs_1/new 
+// Tcl Message: close [ open /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.srcs/constrs_1/new/nolinear_function.xdc w ] 
+// Tcl Message: add_files -fileset constrs_1 /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.srcs/constrs_1/new/nolinear_function.xdc 
+// Tcl Message: set_property target_constrs_file /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.srcs/constrs_1/new/nolinear_function.xdc [current_fileset -constrset] 
+// Tcl Message: INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'. 
+// TclEventType: DESIGN_SAVE
+dismissDialog("Save Constraints"); // a
+// [GUI Memory]: 308 MB (+1602kb) [00:31:38]
+// Tcl Message: save_constraints -force 
+// A (cs): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bz
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 48 
+// Tcl Message: [Thu Aug 14 00:43:43 2025] Launched synth_1... Run output will be captured here: /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.runs/synth_1/runme.log [Thu Aug 14 00:43:43 2025] Launched impl_1... Run output will be captured here: /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 24 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 168 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cs):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// Tcl Message: refresh_design 
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 10,001 MB. GUI used memory: 221 MB. Current time: 8/14/25, 12:46:34 AM EDT
+// Engine heap size: 10,001 MB. GUI used memory: 221 MB. Current time: 8/14/25, 12:46:34 AM EDT
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 10,001 MB. GUI used memory: 125 MB. Current time: 8/14/25, 12:46:37 AM EDT
+// Xgd.load filename: /home/EDA/Xilinx/Vivado/2021.1/data/parts/xilinx/virtexuplus/devint/virtexuplus/xcvu9p/xcvu9p.xgd; ZipEntry: xcvu9p_detail.xgd elapsed time: 1.3s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 1.5s
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// [Engine Memory]: 10,233 MB (+24199kb) [00:34:42]
+// WARNING: HEventQueue.dispatchEvent() is taking  4684 ms.
+// [Engine Memory]: 10,758 MB (+13542kb) [00:34:42]
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.08 . Memory (MB): peak = 11800.785 ; gain = 0.000 ; free physical = 412996 ; free virtual = 491145 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 470 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2021.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.srcs/constrs_1/new/nolinear_function.xdc] Finished Parsing XDC File [/home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.srcs/constrs_1/new/nolinear_function.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// [Engine Memory]: 11,425 MB (+136202kb) [00:34:43]
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:09 . Memory (MB): peak = 12193.938 ; gain = 393.156 ; free physical = 412420 ; free virtual = 490574 
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 3.5s
+dismissDialog("Reloading"); // bz
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (in) elapsed time: 4.2s
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1, (String) null, 3, true); // A - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  4258 ms.
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1); // A
+// u:  Generate Schematic : addNotify
+dismissDialog("Generate Schematic"); // u
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1); // A
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "in (256) ; IN ;  ;  ;  ;  ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 1); // A
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 84 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, nolinear_function.xdc]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, nolinear_function.xdc]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, nolinear_function.xdc]", 4, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  2163 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, nolinear_function.xdc]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, nolinear_function.xdc]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("nolinear_function.xdc", 201, 192); // bP
+selectCodeEditor("nolinear_function.xdc", 381, 170); // bP
+// Elapsed time: 122 seconds
+collapseTreeTable(PAResourceOtoP.PackageTreePanel_PACKAGE_TREE_PANEL, "All Pins (2104) ; (Multiple) ; (Multiple) ;  ;  ;  ; (Multiple) ;  ; (Multiple) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; (Multiple)", 0); // aw
+expandTreeTable(PAResourceOtoP.PackageTreePanel_PACKAGE_TREE_PANEL, "All Pins (2104) ; (Multiple) ; (Multiple) ;  ;  ;  ; (Multiple) ;  ; (Multiple) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; (Multiple)", 0); // aw
+// Elapsed time: 62 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (7) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 6); // A
+// Elapsed time: 57 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+// Device view-level: 0.0
+selectComboBox(RDIResource.MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT, "I/O Planning", 1); // r
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package", 0); // m
+selectGraphicalView(PAResourceOtoP.PAViews_PACKAGE, 13469, 6715); // B
+selectView(PAResourceOtoP.PAViews_PACKAGE, "Package", 816, 259, 971, 412); // A
+// Run Command: RDIResourceCommand.RDICommands_FIND
+// g (cs): Find: addNotify
+selectComboBox(PAResourceTtoZ.TclFindDialog_FIND, "I/O Port", 2); // e
+selectComboBox("pa.Finder.I/O Ports_criteria_1", "NAME", 0); // g
+selectButton(PAResourceEtoH.Finder_ADD_NEW_CRITERION, "Add a new criterion_1"); // k
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Find"); // g
+selectGraphicalView(PAResourceOtoP.PAViews_PACKAGE, -1750, 4848); // B
+selectView(PAResourceOtoP.PAViews_PACKAGE, "Package", 229, 187, 971, 412); // A
+// Run Command: RDIResourceCommand.RDICommands_FIND
+// g (cs): Find: addNotify
+// Elapsed time: 11 seconds
+setText("pa.Finder.I/O Ports_filter_1", "CLK", true); // C
+// Tcl Command: 'show_objects -name find_1 [get_ports -filter { NAME =~  "*CLK*" && IOBANK > 0 } ]'
+// bz (g):  Find I/O Ports : addNotify
+// Tcl Message: show_objects -name find_1 [get_ports -filter { NAME =~  "*CLK*" && IOBANK > 0 } ] 
+// HOptionPane Warning: '[Coretcl 2-1122] No objects found.  (Find)'
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "OK"); // JButton
+dismissDialog("Find"); // g
+// Elapsed time: 48 seconds
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "I/O Ports_search"); // x: TRUE
+setText("PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE_SEARCH_FIELD", "clk"); // OverlayTextField
+applyEnter(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, (String) null); // A
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ; A10 ; true ; 71 ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 2, "A10", 3, true); // A - Node
+// Elapsed time: 14 seconds
+selectButton("OptionPane.button", "No"); // JButton
+// Elapsed time: 11 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_PACKAGE, 3864, 7726); // B
+// Package select: 'Package Pin - AV18'
+selectView(PAResourceOtoP.PAViews_PACKAGE, "Package", 440, 339, 971, 464); // A
+// [GUI Memory]: 331 MB (+7872kb) [00:43:14]
+// Elapsed time: 90 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_PACKAGE, 2563, 7627, false, false, false, true, false); // B - Popup Trigger
+// Package select: 'Package Pin - AU12'
+selectView(PAResourceOtoP.PAViews_PACKAGE, "Package", 253, 753, 971, 464); // A
+selectView(PAResourceOtoP.PAViews_PACKAGE, "Package", 253, 753, 971, 464, false, false, false, true, false); // A - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Package Pin Properties..."); // an
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "clk ; IN ;  ; A10 ; true ; 71 ; LVCMOS18 ; 1.8 ;  ;  ;  ; NONE ; NONE", 2, "A10", 3, true); // A - Node
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports clk AV18 
+// Elapsed time: 11 seconds
+applyEnter(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, (String) null); // A
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: save_constraints 
+dismissDialog("Save Constraints"); // bz
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// i (cs): Reset and Re-run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Reset and Re-run"); // a
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Reset and Re-run"); // i
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 48 
+// Tcl Message: INFO: [Timing 38-480] Writing timing data to binary archive. 
+// Tcl Message: Writing placer database... Writing XDEF routing. Writing XDEF routing logical nets. Writing XDEF routing special nets. 
+// Tcl Message: Write XDEF Complete: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.06 . Memory (MB): peak = 13797.715 ; gain = 0.000 ; free physical = 414181 ; free virtual = 492337 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Thu Aug 14 00:57:03 2025] Launched impl_1... Run output will be captured here: /home/hyyuan/workspace/nolinear_function/nolinear_function/nolinear_function.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 417 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-876] Port 'clk'  is assigned to PACKAGE_PIN 'AV18'  which can only be used as the N side of a differential clock input. . Please use the following constraint(s) to pass this DRC check:. set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {clk_IBUF_inst/O}]. ]", 2, false); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-876] Port 'clk'  is assigned to PACKAGE_PIN 'AV18'  which can only be used as the N side of a differential clock input. . Please use the following constraint(s) to pass this DRC check:. set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {clk_IBUF_inst/O}]. ]", 2, false, false, false, false, true, false); // ah - Popup Trigger
+// Elapsed time: 262 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // o
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // o
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 25, false); // o
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+// a (cs): Report Utilization: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Report Utilization"); // a
+// bz (cs):  Report Utilization : addNotify
+// Tcl Message: report_utilization -name utilization_1 
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 11,241 MB. GUI used memory: 239 MB. Current time: 8/14/25, 1:08:36 AM EDT
+// Tcl Message: report_utilization: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 13797.715 ; gain = 0.000 ; free physical = 414160 ; free virtual = 492317 
+dismissDialog("Report Utilization"); // bz
+// Elapsed time: 199 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false); // l
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Summary]", 1, false, false, false, false, false, true); // l - Double Click
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "LUT ; 7799 ; 1182240 ; 0.65967995", 0, "0.65967995", 3); // s
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "DSP ; 16 ; 6840 ; 0.23391813", 2, "0.23391813", 3); // s
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "IO ; 527 ; 832 ; 63.341343", 3, "63.341343", 3); // s
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "BUFG ; 1 ; 1800 ; 0.055555556", 4, "0.055555556", 3); // s
+selectTable(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, "LUT ; 7799 ; 1182240 ; 0.65967995", 0, "0.65967995", 3); // s
+// HMemoryUtils.trashcanNow. Engine heap size: 11,241 MB. GUI used memory: 233 MB. Current time: 8/14/25, 1:38:39 AM EDT

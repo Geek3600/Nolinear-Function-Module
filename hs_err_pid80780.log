@@ -1,0 +1,11 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/home/EDA/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xc04c3b) [0x7fb52bcbdc3b]
+/home/EDA/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(JVM_handle_linux_signal+0x14e) [0x7fb52bcc28de]
+/home/EDA/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xbfd538) [0x7fb52bcb6538]
+/lib64/libc.so.6(+0x36400) [0x7fb58b58f400]
+/home/EDA/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_common.so(HI18N::Convert::In(wchar_t const*, wchar_t const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::codecvt<wchar_t, char, __mbstate_t> const&)+0x36) [0x7fb58c7477a6]
+/home/EDA/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_common.so(Java_ui_data_msgmgr_messagemanageri_getMessages+0x1da) [0x7fb58c7da29a]
+[0x7fb51bd94dbd]

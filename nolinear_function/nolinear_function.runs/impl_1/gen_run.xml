@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xcvu9p-flga2104-2-i" LaunchTime="1755147423">
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="nolinear.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="nolinear.sysdef"/>
+  <File Type="BITSTR-MMI" Name="nolinear.mmi"/>
+  <File Type="BITSTR-BMM" Name="nolinear_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="nolinear.nky"/>
+  <File Type="BITSTR-RBT" Name="nolinear.rbt"/>
+  <File Type="REPORTS-TCL" Name="nolinear_reports.tcl"/>
+  <File Type="RCFI_FILE" Name="nolinear.rcfi"/>
+  <File Type="RBD_FILE" Name="nolinear.rbd"/>
+  <File Type="BITSTR-MSK" Name="nolinear.msk"/>
+  <File Type="PA-TCL" Name="nolinear.tcl"/>
+  <File Type="ROUTE-TIMING-PB" Name="nolinear_timing_summary_routed.pb"/>
+  <File Type="NPI_FILE" Name="nolinear.npi"/>
+  <File Type="BG-BIN" Name="nolinear.bin"/>
+  <File Type="RNPI_FILE" Name="nolinear.rnpi"/>
+  <File Type="BG-BGN" Name="nolinear.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="nolinear_routed_bb.dcp"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PWROPT-DCP" Name="nolinear_pwropt.dcp"/>
+  <File Type="RDI-RDI" Name="nolinear.vdi"/>
+  <File Type="PHYSOPT-DCP" Name="nolinear_physopt.dcp"/>
+  <File Type="CFI_FILE" Name="nolinear.cfi"/>
+  <File Type="BG-DRC" Name="nolinear.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="nolinear_routed_error.dcp"/>
+  <File Type="PA-DCP" Name="nolinear.dcp"/>
+  <File Type="PDI-FILE" Name="nolinear.pdi"/>
+  <File Type="BG-BIT" Name="nolinear.bit"/>
+  <File Type="OPT-DRC" Name="nolinear_drc_opted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="nolinear_postroute_physopt_bb.dcp"/>
+  <File Type="OPT-HWDEF" Name="nolinear.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="nolinear_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="nolinear_routed.dcp"/>
+  <File Type="OPT-DCP" Name="nolinear_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="nolinear_placed.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="nolinear_postplace_pwropt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="nolinear_postroute_physopt.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../project/rtl/add.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/const_mul.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/exp2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/log2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/ru.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/selector.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/systolic_odd_even_sort/sort4.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/systolic_odd_even_sort/sort_controller.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/systolic_odd_even_sort/sort_pe.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/systolic_odd_even_sort/systolic_odd_even_sort.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../project/rtl/nolinear.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="nolinear"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/nolinear_function.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/nolinear_function.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>

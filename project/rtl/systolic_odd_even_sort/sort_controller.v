@@ -1,5 +1,8 @@
 `timescale 1ns/1ns
-module sort_controller (
+module sort_controller# (
+    parameter FIX_POINT_WIDTH = 16,
+    parameter DATA_NUM = 1 
+) (
 	input clk,
 	input rst,
     input en,
@@ -14,16 +17,18 @@ module sort_controller (
     output reg odd_RL,
     output reg odd_RR,
     output reg odd_cmp_en,
-    output reg even_cmp_en
+    output reg even_cmp_en,
+    output reg sort_finish
 );
     //one-hot
     parameter IDLE            =   7'b0000001; // 空闲且读入数据
-    parameter EVEN_SL_ODD_RR  =   7'b0000010; // 偶数发左，奇数接右，1个周期
-    parameter EVEN_RL_ODD_SR  =   7'b0000100; // 偶数收右，奇数发左，1个周期
-    parameter EVEN_RR_ODD_SL  =   7'b0001000; // 偶数接右，奇数发左，1个周期
-    parameter EVEN_SR_ODD_RL  =   7'b0010000; // 偶数发右，奇数接左，1个周期
+    parameter EVEN_SL_ODD_RR  =   7'b0000010; // 偶数发左，奇数接右，2个周期
+    parameter EVEN_RL_ODD_SR  =   7'b0000100; // 偶数收右，奇数发左，2个周期
+    parameter EVEN_RR_ODD_SL  =   7'b0001000; // 偶数接右，奇数发左，2个周期
+    parameter EVEN_SR_ODD_RL  =   7'b0010000; // 偶数发右，奇数接左，2个周期
     parameter EVEN_COMPARE    =   7'b0100000; // 奇数PE比较数据 6个周期
     parameter ODD_COMPARE     =   7'b1000000; // 偶数PE比较数据 6个周期
+    localparam [10:0] SORT_ALL_NUM = (DATA_NUM / 2 - 1) * 9 + 1; // 64 136
 
     reg [6:0] current_state;
     reg [6:0] next_state;
@@ -40,6 +45,7 @@ module sort_controller (
         else cnt <= 0;
     end
 
+    // 
     reg cmp_finsih;
     always @(posedge clk) begin
         if (rst) cmp_finsih <= 0;
@@ -47,7 +53,14 @@ module sort_controller (
         else cmp_finsih <= 0;
     end
 
-
+    reg [10:0] cnt_finish;
+    assign sort_finish = (cnt_finish == SORT_ALL_NUM) ? 1 : 0;
+    always @(posedge clk) begin
+        if (rst) cnt_finish <= 0;
+        else if (en && cnt_finish < SORT_ALL_NUM)cnt_finish <= cnt_finish + 1;
+        else cnt_finish <= 0;
+    end
+    
     always @(*) begin
         case (current_state)
             IDLE: begin
